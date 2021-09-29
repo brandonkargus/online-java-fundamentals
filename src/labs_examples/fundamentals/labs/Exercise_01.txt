@@ -22,3 +22,54 @@ Example Output (pwd):
     1. Cadens-MacBook-Pro:CodingNomads cadenmackenzie$ pwd
        /Users/cadenmackenzie/Documents/CodingNomads
 
+------------------------------------------------------------------------------------------
+1. C:\Users\brand\Desktop
+   λ cd codingnomads_practice
+
+2. C:\Users\brand\Desktop\CodingNomads_practice
+   λ mkdir Terminal_testing
+
+3.
+a. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ touch file1.txt
+   C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ touch file2.text
+   C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ touch file3.text
+b. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ pwd
+   C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+c. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ dir
+    Volume in drive C is Local Disk
+    Volume Serial Number is DEC0-F685
+
+    Directory of C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+
+   09/28/2021  08:53 AM    <DIR>          .
+   09/28/2021  08:53 AM    <DIR>          ..
+   09/28/2021  08:52 AM                 0 file1.txt
+   09/28/2021  08:53 AM                 0 file2.text
+   09/28/2021  08:53 AM                 0 file3.text
+                  3 File(s)              0 bytes
+                  2 Dir(s)  35,749,421,056 bytes free
+5. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ mkdir anotherFolder
+6. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ cp file1.txt anotherFolder
+7. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ mv file2.txt anotherFolder
+8.
+a. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing\anotherFolder
+   λ rm -f file1.txt
+b. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ rm -d anotherFolder
+9.
+a. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ vim file1.txt
+b. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ cat file1.txt
+   I wrote this inside the file
+c. C:\Users\brand\Desktop\CodingNomads_practice\Terminal_testing
+   λ grep "wrote" file1.txt
+   I wrote this inside the file

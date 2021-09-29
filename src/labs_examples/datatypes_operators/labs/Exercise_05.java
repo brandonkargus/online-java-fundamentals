@@ -17,8 +17,24 @@ class LogicalOperators {
             System.out.println("a or b is true");
         }
 
-        // write your code below
-
+        // example of short-circuit "OR"
+        if(a || b){
+            System.out.println("a or b is true");
+        }
+        // example of "AND"
+        if(a & b){
+            System.out.println("a and b are true");
+        }
+        // example of short-circuit "AND"
+        if(a && b){
+            System.out.println("a and b are true");
+        }
+        if(a ^ b){
+            System.out.println("one is true and one is false");
+        }
+        if(!a || b){
+            System.out.println("this won't run, because a is true");
+        }
     }
 
 }
