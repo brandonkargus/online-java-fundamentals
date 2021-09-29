@@ -17,13 +17,22 @@ package labs_examples.datatypes_operators.labs;
  *
  *      Notice how each type is converted. In which direction is information lost?
  *
+ *
  */
 
 public class Exercise_02 {
 
     public static void main(String[] args) {
 
-        // write code here
+        int b = 777;
+        double d = b;
+        System.out.println(d);
+
+        double r = 10.5;
+        int y = (int)r;
+        System.out.println(y);
+
+        //information is lost when converting from a larger data type to a smaller type
 
     }
 }

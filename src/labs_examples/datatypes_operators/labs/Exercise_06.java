@@ -12,7 +12,15 @@ public class Exercise_06 {
 
     public static void main(String[] args) {
 
-        // write code here
+        float radius = 3.14f;
+
+        int height = 5;
+
+        float volume = 3.1415f * (radius * radius);
+
+        float surfaceArea = (((3.1415f * radius) * 2) * 2) + (3.1415f * radius) * 2;
+
+        System.out.println("If my math is correct, volume is " + volume + ", surface area is " + surfaceArea);
 
     }
 }
