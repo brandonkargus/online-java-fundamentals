@@ -23,7 +23,14 @@ public class Exercise_01 {
         // assign input to variable as int
         int number = scanner.nextInt();
 
-        // write completed code here
+        if(number < 1 || number > 1000000){
+            System.out.println("invalid number, run program and try again");
+
+        }else if(number % 2 == 0){
+            System.out.println("number entered is even");
+        }else{
+            System.out.println("number entered is odd");
+        }
 
     }
 }

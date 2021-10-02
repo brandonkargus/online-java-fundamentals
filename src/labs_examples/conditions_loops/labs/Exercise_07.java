@@ -1,5 +1,7 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 7: First vowel
  *
@@ -14,4 +16,21 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_07 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please type a word.....");
+        String word = scanner.next();
+        scanner.close();
+
+        //having trouble using a while loop in this scenario, have an alternate solution below....
+
+
+        String s = word.replaceFirst("[AEIOUaeiou]", "7");
+        int firstVowel = s.indexOf('7');
+        System.out.println(word);
+        System.out.println(word.charAt(firstVowel));
+    }
 }
+
+

@@ -1,5 +1,7 @@
 package labs_examples.conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 5: Calculator
  *
@@ -16,4 +18,31 @@ package labs_examples.conditions_loops.labs;
  */
 
 public class Exercise_05 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter two numbers, an upper and lower boundary");
+        int value1 = scanner.nextInt();
+        int value2 = scanner.nextInt();
+        scanner.close();
+        int lower = 0;
+        int upper = 0;
+        double count = 0;
+        int sum = 0;
+        if(value1 > value2){
+            upper = value1;
+            lower = value2;
+        }else{
+            upper = value2;
+            lower = value1;
+        }
+        for(int i = lower; i <= upper; i++){
+            sum += i;
+            count++;
+        }
+        double average = sum / count;
+        System.out.println(sum);
+        System.out.println(average);
+
+    }
 }
