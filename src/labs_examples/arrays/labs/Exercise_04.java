@@ -9,5 +9,14 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
+        String[][] randomNflTeams = {{"Vikings", "Packers", "Bears"}, {"Dolphins", "Cowboys"}, {"Patriots", "Ravens", "Lions", "Jets", "Chargers"}
+        };
 
+        for(String[] outer : randomNflTeams){
+            for(String team : outer){
+                System.out.println(team);
+            }
+        }
+    }
 }

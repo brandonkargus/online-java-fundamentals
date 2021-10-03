@@ -1,5 +1,7 @@
 package labs_examples.arrays.labs;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,17 +16,16 @@ public class Exercise_02 {
 
     public static void main(String[] args) {
 
-        int[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        Integer[] array = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number from 1-10");
         int number = scanner.nextInt();
+        List<Integer> al = Arrays.asList(array);
         if(number < 1 || number > 10){
             System.out.println("Invalid Entry, please run again");
         }else{
-            System.out.println("Index of " + number + " holds " + array[number]);
+            System.out.println("Number " + number + " is at index " + al.indexOf(number) );
         }
-
-        // not sure if I'm doing this right, or have the problem reversed
     }
 }
