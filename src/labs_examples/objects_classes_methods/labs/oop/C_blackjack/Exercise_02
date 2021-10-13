@@ -22,3 +22,10 @@ value is less than 21
 It will return false is the computer player does not want another card. If the computer player's hand currently has a
 value less than 16 it will want another card. If the hand value is greater than or equal to 16 the computer will not
 want another card.
+
+
+ CARD SUITS UNICODE
+                '\u2660'
+                '\u2666'
+                '\u2663'
+                '\u2764'
