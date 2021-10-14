@@ -25,9 +25,11 @@ public class Player {
     public Hand getHand() {
         return hand;
     }
-    public Card addCard(Card card){
+    //public Card addCard(Card card){
 
-    }
+
+
+    //}
     public void setHand(Hand hand) {
         this.hand = hand;
     }

@@ -9,7 +9,7 @@ public class Package2Class {
         System.out.println("This is public and can be used by other packages...");
 
         Package1Class testing = new Package1Class();
-        testing.printTest();   //this is protected and can not be accessed from outside package1
+        //testing.printTest();   //this is protected and can not be accessed from outside package1
 
         Package1Class test = new Package1Class();
         test.printTest2();      //this is public in package1 and can be accessed here

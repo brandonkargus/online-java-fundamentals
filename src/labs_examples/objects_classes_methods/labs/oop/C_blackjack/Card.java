@@ -40,4 +40,9 @@ public class Card {
             default:return '♣';
         }
     }
+
+    @Override
+    public String toString() {
+        return "Card is " + cardValue +  showSuit(suit);
+    }
 }

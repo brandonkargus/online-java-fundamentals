@@ -33,8 +33,6 @@ public class Deck {
        }
 
 
-
-
            usedCards.add(a);
 
     }

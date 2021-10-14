@@ -1,7 +1,5 @@
 package labs_examples.exception_handling.labs;
 
-import java.util.Arrays;
-
 /**
  * Exception Handling Exercise 5:
  *
@@ -11,7 +9,19 @@ import java.util.Arrays;
 
 class Example {
 
+
+    public static int getDivision(int a, int b) throws ArithmeticException{
+        return a/b;
+    }
+
     public static void main(String[] args) {
+
+        try{
+            int r = getDivision(6, 0);
+        }catch(ArithmeticException ex){
+            System.out.println("Exception thrown from the getDivision() method, no division by zero allowed");
+        }
+
 
     }
 

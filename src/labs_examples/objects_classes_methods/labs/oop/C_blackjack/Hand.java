@@ -19,7 +19,7 @@ public class Hand {
     public ArrayList<Card> getCards() {
         return cards;
     }
-    public void addCard(Card card){
+    public void addCard(Card card){          //look here
         cards.add(card);
     }
     public void setCards(ArrayList<Card> cards) {
