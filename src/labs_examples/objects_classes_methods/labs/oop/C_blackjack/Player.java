@@ -5,9 +5,11 @@ public class Player {
     private Hand hand;
     private int potValue;
 
-    public Player(){
-
+    public Player(String name) {
+        this.name = name;
+        this.hand = new Hand();
     }
+
     public Player(String name, Hand hand, int potValue) {
         this.name = name;
         this.hand = hand;
@@ -15,41 +17,36 @@ public class Player {
     }
 
     public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        return this.name;
     }
 
     public Hand getHand() {
-        return hand;
+        return this.hand;
     }
-    //public Card addCard(Card card){
 
+    public void addCard(Card card) {
+        this.hand.addCard(card);
+        this.hand.getHandValue();
 
-
-    //}
-    public void setHand(Hand hand) {
-        this.hand = hand;
     }
 
     public int getPotValue() {
-        return potValue;
+        return this.potValue;
     }
 
     public void setPotValue(int potValue) {
         this.potValue = potValue;
     }
-    public boolean computerAI(){
-        return hand.getHandValue() < 16 ? true : false;
+
+    public boolean computerAI() {
+        return this.hand.getHandValue() < 16;
     }
+
     @Override
     public String toString() {
-        return "Player{" +
-                "name ='" + name + '\'' +
-                ", hand =" + hand +
-                ", potValue =" + potValue +
-                '}';
+        return this.name +
+                ": " + this.hand +
+                ", Pot Value = " + this.potValue;
+
     }
 }

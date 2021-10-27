@@ -6,9 +6,9 @@ public class Hand {
     private ArrayList<Card> cards;
     private int handValue;
 
-    public Hand(){
-        getHandValue();
+    public Hand() {
         this.cards = new ArrayList<>();
+        this.getHandValue();
     }
 
     public Hand(ArrayList<Card> cards, int handValue) {
@@ -16,25 +16,21 @@ public class Hand {
         this.handValue = handValue;
     }
 
-    public ArrayList<Card> getCards() {
-        return cards;
-    }
-    public void addCard(Card card){          //look here
-        cards.add(card);
-    }
-    public void setCards(ArrayList<Card> cards) {
-        this.cards = cards;
+    public void addCard(Card card) {
+        this.cards.add(card);
     }
 
-    public int getHandValue() {                              //SHOW in 1-on-1 (5 of 6)
-        for(int i = 0; i < cards.size(); i++){
-            handValue += cards.get(i).getCardValue();
+    public int getHandValue() {
+        this.handValue = 0;
+        for (int i = 0; i < this.cards.size(); i++) {
+            this.handValue += this.cards.get(i).getCardValue();
         }
 
-        return handValue;
+        return this.handValue;
     }
-    public boolean overTwentyOne(){                    //SHOW in 1-on-1 no "equal to" mentioned (3 of 6)
-        return handValue > 21 ?  true : false;
+
+    public boolean overTwentyOne() {
+        return this.handValue > 21 ? true : false;
     }
 
     public void setHandValue(int handValue) {
@@ -43,9 +39,7 @@ public class Hand {
 
     @Override
     public String toString() {
-        return "Hand" +
-                " = " + cards +
-                ", handValue=" + handValue +
-                '}';
+        return this.cards +
+                ", Hand Value = " + this.handValue;
     }
 }

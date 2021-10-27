@@ -15,8 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 class ShowFile {
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         String filePath = "src/labs_examples/input_output/files/byte_data";
 
         int i;
@@ -34,16 +33,16 @@ class ShowFile {
             // read bytes until EOF is encountered
             do {
                 i = fin.read();
-                if(i != -1)
+                if (i != -1)
                     System.out.write((char) i);
-            } while(i != -1);
-        } catch(IOException exc) {
+            } while (i != -1);
+        } catch (IOException exc) {
             System.out.println("Error reading file.");
         }
 
         try {
             fin.close();
-        } catch(IOException exc) {
+        } catch (IOException exc) {
             System.out.println("Error closing file.");
         }
 
