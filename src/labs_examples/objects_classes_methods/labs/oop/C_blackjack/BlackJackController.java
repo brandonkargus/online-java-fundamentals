@@ -3,6 +3,9 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 import java.util.Scanner;
 
 public class BlackJackController {
+    private static int roundsPlayed = 0;
+    private static int cpuRoundsWon = 0;
+    private static int playerRoundsWon = 0;
 
     public static void playBlackJack() {
         Scanner scanner = new Scanner(System.in);
@@ -26,6 +29,7 @@ public class BlackJackController {
         player2.setPotValue(pot);
 
         Deck newDeck = new Deck();
+
 
         boolean response = true;
 
@@ -95,18 +99,22 @@ public class BlackJackController {
 
             if (player1.getHand().overTwentyOne() && !player2.getHand().overTwentyOne()) {
                 System.out.println(player2.getName() + " has won the round!!!!!!");
+                cpuRoundsWon++;
                 player2.setPotValue(player2.getPotValue() + player1bet);
                 player1.setPotValue((player1.getPotValue() - player1bet));
             } else if (player2.getHand().overTwentyOne() && !player1.getHand().overTwentyOne()) {
                 System.out.println(player1.getName() + " has won the round!!!!!!");
+                playerRoundsWon++;
                 player1.setPotValue((player1.getPotValue() + player2bet));
                 player2.setPotValue(player2.getPotValue() - player2bet);
             } else if (player1.getHand().getHandValue() > player2.getHand().getHandValue() && !player1.getHand().overTwentyOne() && !player2.getHand().overTwentyOne()) {
                 System.out.println(player1.getName() + " " + "has won the round!!!!!!");
+                playerRoundsWon++;
                 player1.setPotValue((player1.getPotValue() + player2bet));
                 player2.setPotValue(player2.getPotValue() - player2bet);
             } else if (player2.getHand().getHandValue() > player1.getHand().getHandValue() && !player2.getHand().overTwentyOne() && !player1.getHand().overTwentyOne()) {
                 System.out.println(player2.getName() + " " + "has won the round!!!!!!");
+                cpuRoundsWon++;
                 player2.setPotValue(player2.getPotValue() + player1bet);
                 player1.setPotValue((player1.getPotValue() - player1bet));
             } else {
@@ -115,6 +123,10 @@ public class BlackJackController {
             System.out.println();
             System.out.println(player1);
             System.out.println(player2);
+            roundsPlayed++;
+            System.out.println("Rounds played = " + roundsPlayed);
+            System.out.println("Rounds won by " + player1.getName() + " = " + playerRoundsWon);
+            System.out.println("Rounds won by " + player2.getName() + " = " + cpuRoundsWon);
 
 
             System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
@@ -135,13 +147,24 @@ public class BlackJackController {
         System.out.println();
         System.out.println(player1);
         System.out.println(player2);
+        System.out.println("Total rounds played = " + roundsPlayed);
         System.out.println();
+        System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
         if (player1.getPotValue() > player2.getPotValue()) {
-            System.out.println(player1.getName() + " has won the game!!");
+            System.out.println(player1.getName() + " has WON THE GAME!!");
+            System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+            System.out.println(player1.getName() + " won " + playerRoundsWon + " rounds.");
+            System.out.println(player2.getName() + " won " + cpuRoundsWon + " rounds.");
         } else if (player2.getPotValue() > player1.getPotValue()) {
-            System.out.println(player2.getName() + " has won the game!!");
+            System.out.println(player2.getName() + " has WON THE GAME!!");
+            System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+            System.out.println(player2.getName() + " won " + cpuRoundsWon + " rounds.");
+            System.out.println(player1.getName() + " won " + playerRoundsWon + " rounds.");
         } else {
             System.out.println("The game was a tie.");
+            System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+            System.out.println(player1.getName() + " won " + playerRoundsWon + " rounds.");
+            System.out.println(player2.getName() + " won " + cpuRoundsWon + " rounds.");
         }
 
     }
