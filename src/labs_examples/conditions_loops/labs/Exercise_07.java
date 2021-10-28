@@ -36,7 +36,7 @@ public class Exercise_07 {
 //        //}
 
 
-        
+
 
         int i = 0;
         while (i < word.length()) {

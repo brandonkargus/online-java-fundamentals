@@ -42,7 +42,6 @@ public class Deck {
     @Override
     public String toString() {
         return "Full deck of cards includes...." +
-                Arrays.toString(cards) +
-                '}';
+                Arrays.toString(cards);
     }
 }
