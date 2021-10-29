@@ -48,7 +48,7 @@ public class BlackJackController {
             scanner.nextLine();
 
 
-            newDeck.dealCard(player1);
+            newDeck.dealCard(player1);                    // TODO reshuffle deck, POSSIBLY allow flexibility with ACE
             newDeck.dealCard(player2);
             newDeck.dealCard(player1);
             newDeck.dealCard(player2);
@@ -133,8 +133,8 @@ public class BlackJackController {
                 String yesOrNo = scanner.nextLine();
                 response = yesOrNo.equalsIgnoreCase("y") || yesOrNo.equalsIgnoreCase("yes");
 
-                player1.getHand().removeCards();           // TODO thought I had a solve, but issues created, seems like second card dealt rolls into next round
-                player2.getHand().removeCards();
+                player1.getHand().clearHand();
+                player2.getHand().clearHand();
             }
 
         }
