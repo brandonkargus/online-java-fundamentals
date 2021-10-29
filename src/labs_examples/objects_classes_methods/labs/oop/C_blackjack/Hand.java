@@ -36,6 +36,11 @@ public class Hand {
     public void setHandValue(int handValue) {
         this.handValue = handValue;
     }
+    public void removeCards(){
+        for(int i = 0; i < this.cards.size(); i++){
+            this.cards.remove(i);
+        }
+    }
 
     @Override
     public String toString() {

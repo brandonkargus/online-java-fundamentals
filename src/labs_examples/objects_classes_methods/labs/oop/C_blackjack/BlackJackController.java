@@ -47,8 +47,6 @@ public class BlackJackController {
             }
             scanner.nextLine();
 
-                                                           // TODO how to create new hand and not keep building on previous, same for hand value
-
 
             newDeck.dealCard(player1);
             newDeck.dealCard(player2);
@@ -134,6 +132,9 @@ public class BlackJackController {
                 System.out.println("Deal another round? (y/n)");
                 String yesOrNo = scanner.nextLine();
                 response = yesOrNo.equalsIgnoreCase("y") || yesOrNo.equalsIgnoreCase("yes");
+
+                player1.getHand().removeCards();           // TODO thought I had a solve, but issues created, seems like second card dealt rolls into next round
+                player2.getHand().removeCards();
             }
 
         }
