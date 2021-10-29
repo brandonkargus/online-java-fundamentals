@@ -1,5 +1,7 @@
 package labs_examples.input_output.labs;
 
+import java.io.*;
+
 /**
  * Input/Output Exercise 1: File input/output
  *
@@ -12,7 +14,32 @@ package labs_examples.input_output.labs;
 class Example {
     public static void main(String[] args) {
 
+        FileInputStream in = null;
+        FileOutputStream out = null;
+        BufferedInputStream buffIn = null;
+        BufferedOutputStream buffOut = null;                       //successfully used BufferedInput/Output to write data from "KtoD" to "char_data"
 
+        try {
+            buffIn = new BufferedInputStream(new FileInputStream("src/labs_examples/input_output/files/KtoD.txt"));
+            buffOut = new BufferedOutputStream(new FileOutputStream("src/labs_examples/input_output/files/char_data.txt"));
+
+            byte[] buffer = new byte[5];
+            int bytesRead = 0;
+
+            while((bytesRead = buffIn.read(buffer)) != -1){
+                buffOut.write(buffer, 0, bytesRead);
+            }
+
+        } catch (IOException ex){
+            ex.printStackTrace();
+        } finally {
+            try {
+                buffIn.close();
+                buffOut.close();
+            } catch (IOException ex){
+                ex.printStackTrace();
+            }
+        }
 
     }
 }
