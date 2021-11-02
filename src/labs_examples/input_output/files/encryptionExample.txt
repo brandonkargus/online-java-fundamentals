@@ -11,4 +11,4 @@ Th~ v-lu~ of - progr-m is proportion-l to th~ w~ight of its output.
 Progr-m compl~xity grows until it ~xc~~ds th~ c-p-biliti~s of th~ progr-mm~r who must m-int-in it.
 Any non-trivi-l progr-m cont-ins -t l~-st on~ bug.
 Und~t~ct-bl~ ~rrors -r~ infinit~ in v-ri~ty, in contr-st to d~t~ct-bl~ ~rrors, which by d~finition -r~ limit~d.
-Adding m-npow~r to - l-t~ softw-r~ proj~ct m-k~s it l-t~r!￿
+Adding m-npow~r to - l-t~ softw-r~ proj~ct m-k~s it l-t~r!

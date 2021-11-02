@@ -17,6 +17,7 @@ public class Card {
         } else {
             return this.cardValue + 1;
         }
+
     }
 
     public char showSuit(int suit) {

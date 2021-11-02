@@ -7,10 +7,10 @@ import java.io.*;
  * <p>
  * -Using the BufferedReader, read a file character by character and write an encrypted version to a new file.
  * -For example, change every 'a' to '-' and every 'e' to '~' .
- * -Make sure you close the connections to both files. (COMPLETE, see "encryptionExample.txt")
+ * -Make sure you close the connections to both files.             (COMPLETE, see "encryptionExample.txt")
  * <p>
  * Then, read back the encrypted file using the BufferedReader and
- * print out the unencrypted version. Does it match the original file? (YES, except for "￿￿" added at very end after last sentence)
+ * print out the unencrypted version. Does it match the original file?           (YES, except for "￿￿" added at very end after last sentence)
  */
 
 public class Exercise_02 {
@@ -25,12 +25,14 @@ public class Exercise_02 {
 
             do {
                 i = br.read();
-                if (i != -1)
+                if (i != -1) {
                     if ((char) i == 'a')
                         i = '-';
-                if ((char) i == 'e')
-                    i = '~';
-                bw.write(i);
+                    if ((char) i == 'e')
+                        i = '~';
+                    bw.write(i);
+                }
+
             } while (i != -1);
 
         } catch (IOException ex) {
@@ -44,12 +46,14 @@ public class Exercise_02 {
 
             do {
                 i = br.read();
-                if (i != -1)
+                if (i != -1) {
                     if ((char) i == '-')
                         i = 'a';
-                if ((char) i == '~')
-                    i = 'e';
-                System.out.print((char)i);
+                    if ((char) i == '~')
+                        i = 'e';
+                    System.out.print((char) i);
+                }
+
             } while (i != -1);
 
         } catch (IOException exc) {

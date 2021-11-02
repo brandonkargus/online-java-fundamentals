@@ -7,7 +7,7 @@ import java.io.*;
  * <p>
  * 1) Demonstrate the usage of at least two additional Byte Streams         (USED ByteArrayInputStream, and ByteArrayOutputStream)
  * 2) Demonstrate the usage of at least two additional Character Streams    (USED StringWriter, and StringReader)
- * 3) Demonstrate using a buffer on one of the Byte Streams and one of the Character Streams (USED StringBuffer on StringWriter, and
+ * 3) Demonstrate using a buffer on one of the Byte Streams and one of the Character Streams (USED StringBuffer on StringWriter, and....
  * 4) Demonstrate the use of the DataInputStream and DataOutputStream
  */
 

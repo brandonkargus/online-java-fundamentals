@@ -33,9 +33,6 @@ public class Hand {
         return this.handValue > 21 ? true : false;
     }
 
-    public void setHandValue(int handValue) {
-        this.handValue = handValue;
-    }
     public void clearHand(){
             this.cards.clear();
     }
