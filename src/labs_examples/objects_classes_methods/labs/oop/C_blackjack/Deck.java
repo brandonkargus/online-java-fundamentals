@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Deck {
+
     private Card[] cards;
     private ArrayList<Integer> usedCards;
 
@@ -37,6 +38,7 @@ public class Deck {
         player.addCard(cards[a]);
 
         usedCards.add(a);
+
     }
 
     @Override

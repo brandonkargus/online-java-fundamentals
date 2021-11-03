@@ -11,4 +11,6 @@ package labs_examples.input_output.labs;
  *
  *      Then, write the arraylist of objects back out to a new .csv file. Ensure that the resulting csv file is valid.
  *
+ *      (Exercise Complete, see Guitar class, CSV_Parse_Guitar class, guitars.csv, and guitars.Write.csv)
+ *
  */

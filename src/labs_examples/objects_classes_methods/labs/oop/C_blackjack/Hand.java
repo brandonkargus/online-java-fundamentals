@@ -36,6 +36,9 @@ public class Hand {
     public void clearHand(){
             this.cards.clear();
     }
+    public int getSize(){
+        return this.cards.size();
+    }
 
     @Override
     public String toString() {
