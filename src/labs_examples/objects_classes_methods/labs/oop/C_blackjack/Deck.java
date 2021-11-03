@@ -40,6 +40,9 @@ public class Deck {
         usedCards.add(a);
 
     }
+    public void replenishDeck(){
+        this.usedCards.clear();
+    }
 
     @Override
     public String toString() {

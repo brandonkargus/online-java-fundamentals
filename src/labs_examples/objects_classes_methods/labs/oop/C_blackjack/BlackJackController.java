@@ -48,7 +48,7 @@ public class BlackJackController {
             scanner.nextLine();
 
 
-            newDeck.dealCard(player1);                    // TODO reshuffle deck, POSSIBLY allow flexibility with ACE
+            newDeck.dealCard(player1);                    // TODO allow flexibility with ACE
             newDeck.dealCard(player2);
             newDeck.dealCard(player1);
             newDeck.dealCard(player2);
@@ -135,6 +135,7 @@ public class BlackJackController {
 
                 player1.getHand().clearHand();
                 player2.getHand().clearHand();
+                newDeck.replenishDeck();                            // TODO reshuffle deck rather than restart
             }
 
         }
