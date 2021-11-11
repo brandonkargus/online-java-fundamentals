@@ -1,7 +1,7 @@
 package labs_examples.enumerations.examples;
 
 enum Tools {
-    SCREWDRIVER, WRENCH, HAMMER, PLIERS
+    SCREWDRIVER, WRENCH, HAMMER, PLIERS;
 }
 
 class ShowEnum {
