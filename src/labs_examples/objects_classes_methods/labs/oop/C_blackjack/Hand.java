@@ -30,7 +30,7 @@ public class Hand {
     }
 
     public boolean overTwentyOne() {
-        return this.handValue > 21 ? true : false;
+        return this.handValue > 21;
     }
 
     public void clearHand(){
