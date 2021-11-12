@@ -3,8 +3,10 @@ package labs_examples.multi_threading.labs;
 /**
  * Multithreading Exercise 5:
  * <p>
- * Demonstrate the use of a wait() and notify()      (COMPLETE)
+ * Demonstrate the use of a wait() and notify()      (COMPLETE)  *note - Heavily influenced by an example I found at "https://java2blog.com/print-even-odd-numbers-threads-java/"
+                                                                  I modeled my example after this.    
  */
+
 
 class Exercise_05 {
     public static class OddsAndEvens {
