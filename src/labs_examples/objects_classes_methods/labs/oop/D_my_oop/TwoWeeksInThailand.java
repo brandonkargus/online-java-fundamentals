@@ -33,11 +33,11 @@ public class TwoWeeksInThailand {
         System.out.println("---------------------------------");
         System.out.println("Please select 3 activity sets you're interested in....");
         System.out.println("Enter a number");
-        System.out.println("1. TEMPLES, ART & MUSEUMS, STREET FOOD");
-        System.out.println("2. ELEPHANT SANCTUARY, RIVER RAFTING, FOREST HIKING");
-        System.out.println("3. SNORKELING, BEACH BUMMING, JUNGLE RAVE PARTY");
-        System.out.println("4. ANCIENT RUINS, MONKEY WATCHING, HISTORY TOUR");
-        System.out.println("5. CANYON HIKING, ARTISAN MARKET, SCOOTER RENTALS");
+        System.out.println("1. " + bangkok.getActivities());
+        System.out.println("2. " + chiangMai.getActivities());
+        System.out.println("3. " + kohPhangan.getActivities());
+        System.out.println("4. " + ayutthaya.getActivities());
+        System.out.println("5. " + pai.getActivities());
 
         int firstChoice = scanner.nextInt();
         while (firstChoice < 1 || firstChoice > 5) {
@@ -61,7 +61,7 @@ public class TwoWeeksInThailand {
             thirdChoice = scanner.nextInt();
         }
         while (thirdChoice == secondChoice || thirdChoice == firstChoice) {
-            System.out.println("Activity set already selected, please enter another activity...");
+            System.out.println("Activity set already selected, please enter another activity set...");
             thirdChoice = scanner.nextInt();
         }
         System.out.println("---------------------------------");
@@ -74,7 +74,7 @@ public class TwoWeeksInThailand {
                 choices[0] = bangkok.getActivities();
                 break;
             case 2:
-                choices[0] = chiangMai.getActivities();
+                choices[0] = chiangMai.getActivities();  // TODO reference AL not direct
                 break;
             case 3:
                 choices[0] = kohPhangan.getActivities();
@@ -140,7 +140,7 @@ public class TwoWeeksInThailand {
                 transport = "BUS and/or BOAT";
                 break;
             case 2:
-                transport = "TRAIN and/or BOAT";
+                transport = "TRAIN and/or BOAT";  // TODO make into Array and reference rather than type string out
                 break;
             case 3:
                 transport = "PLANE";
@@ -160,7 +160,7 @@ public class TwoWeeksInThailand {
         System.out.println("Based on your budget, the best transportation method for you is... " + transport);
         switch (budget) {
             case 1:
-                System.out.println("Your accommodations will be BACKPACKER HOSTELS");
+                System.out.println("Your accommodations will be BACKPACKER HOSTELS");  // TODO make into Array and reference
                 break;
             case 2:
                 System.out.println("Your accommodations will be GUESTHOUSES");
