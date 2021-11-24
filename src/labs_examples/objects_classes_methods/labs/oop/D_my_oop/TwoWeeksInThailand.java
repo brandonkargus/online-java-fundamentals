@@ -6,7 +6,35 @@ import java.util.Scanner;
 
 public class TwoWeeksInThailand {
 
+    public static String getTransport(int i) {
+        switch (i) {
+            case 1:
+                return "BUS and/or BOAT";
+            case 2:
+                return "TRAIN and/or BOAT";
+            default:
+                return "PLANE";
+        }
+    }
+    public static String getBudget(int i) {
+        switch (i) {
+            case 1:
+                return "$400-600 ($) : ~$29-$42/day";
+            case 2:
+                return "$601-800 ($$) : ~$43-$57/day";
+            default:
+                return "$801+ ($$$) : ~$58+/day";
+        }
+    }
+    public static String getAccommodation(int i) {
+        String[] accoms = new String[]{"BACKPACKER HOSTELS", "GUESTHOUSES", "MID-RANGE HOTELS"};
+        switch(i) {
+            case 1 : return accoms[0];
+            case 2 : return accoms[1];
+            default: return accoms[2];
+        }
 
+    }
     public static void clientCreator() {
         Scanner scanner = new Scanner(System.in);
         Destination bangkok = new Destination("BANGKOK", "TEMPLES, ART & MUSEUMS, STREET FOOD", "SOUTHERN", "THE BUSTLING AND LIVELY CAPITAL CITY.");
@@ -33,11 +61,11 @@ public class TwoWeeksInThailand {
         System.out.println("---------------------------------");
         System.out.println("Please select 3 activity sets you're interested in....");
         System.out.println("Enter a number");
-        System.out.println("1. " + bangkok.getActivities());
-        System.out.println("2. " + chiangMai.getActivities());
-        System.out.println("3. " + kohPhangan.getActivities());
-        System.out.println("4. " + ayutthaya.getActivities());
-        System.out.println("5. " + pai.getActivities());
+        System.out.println("1. " + destinations.get(0).getActivities());
+        System.out.println("2. " + destinations.get(1).getActivities());
+        System.out.println("3. " + destinations.get(2).getActivities());
+        System.out.println("4. " + destinations.get(3).getActivities());
+        System.out.println("5. " + destinations.get(4).getActivities());
 
         int firstChoice = scanner.nextInt();
         while (firstChoice < 1 || firstChoice > 5) {
@@ -71,53 +99,53 @@ public class TwoWeeksInThailand {
 
         switch (firstChoice) {
             case 1:
-                choices[0] = bangkok.getActivities();
+                choices[0] = destinations.get(0).getActivities();
                 break;
             case 2:
-                choices[0] = chiangMai.getActivities();  // TODO reference AL not direct
+                choices[0] = destinations.get(1).getActivities();
                 break;
             case 3:
-                choices[0] = kohPhangan.getActivities();
+                choices[0] = destinations.get(2).getActivities();
                 break;
             case 4:
-                choices[0] = ayutthaya.getActivities();
+                choices[0] = destinations.get(3).getActivities();
                 break;
             default:
-                choices[0] = pai.getActivities();
+                choices[0] = destinations.get(4).getActivities();
 
         }
         switch (secondChoice) {
             case 1:
-                choices[1] = bangkok.getActivities();
+                choices[1] = destinations.get(0).getActivities();
                 break;
             case 2:
-                choices[1] = chiangMai.getActivities();
+                choices[1] = destinations.get(1).getActivities();
                 break;
             case 3:
-                choices[1] = kohPhangan.getActivities();
+                choices[1] = destinations.get(2).getActivities();
                 break;
             case 4:
-                choices[1] = ayutthaya.getActivities();
+                choices[1] = destinations.get(3).getActivities();
                 break;
             default:
-                choices[1] = pai.getActivities();
+                choices[1] = destinations.get(4).getActivities();
 
         }
         switch (thirdChoice) {
             case 1:
-                choices[2] = bangkok.getActivities();
+                choices[2] = destinations.get(0).getActivities();
                 break;
             case 2:
-                choices[2] = chiangMai.getActivities();
+                choices[2] = destinations.get(1).getActivities();
                 break;
             case 3:
-                choices[2] = kohPhangan.getActivities();
+                choices[2] = destinations.get(2).getActivities();
                 break;
             case 4:
-                choices[2] = ayutthaya.getActivities();
+                choices[2] = destinations.get(3).getActivities();
                 break;
             default:
-                choices[2] = pai.getActivities();
+                choices[2] = destinations.get(4).getActivities();
 
         }
         System.out.println(choices[0]);
@@ -125,56 +153,25 @@ public class TwoWeeksInThailand {
         System.out.println(choices[2]);
         System.out.println("--------------------------------");
         System.out.println("Please select your budget (in USD, not including arrival/departure airfare)......");
-        System.out.println("1. 400-600 ($) : ~$29-$42/day");
-        System.out.println("2. 601-800 ($$) : ~$43-$57/day");
-        System.out.println("3. 801+ ($$$) : ~$58+/day");
+        System.out.println("1." + getBudget(1));
+        System.out.println("2." + getBudget(2));
+        System.out.println("3." + getBudget(3));
         int budget = scanner.nextInt();
         while (budget < 1 || budget > 3) {
             System.out.println("Invalid entry, please select a budget from 1-3....");
             budget = scanner.nextInt();
         }
 
-        String transport = "";
-        switch (budget) {
-            case 1:
-                transport = "BUS and/or BOAT";
-                break;
-            case 2:
-                transport = "TRAIN and/or BOAT";  // TODO make into Array and reference rather than type string out
-                break;
-            case 3:
-                transport = "PLANE";
-        }
-        String budgetDesc = "";
-        switch (budget) {
-            case 1:
-                budgetDesc += "$400-600 ($)";
-                break;
-            case 2:
-                budgetDesc += "$601-800 ($$)";
-                break;
-            default:
-                budgetDesc += "$801+ ($$$)";
-        }
         System.out.println("-----------------------------");
-        System.out.println("Based on your budget, the best transportation method for you is... " + transport);
-        switch (budget) {
-            case 1:
-                System.out.println("Your accommodations will be BACKPACKER HOSTELS");  // TODO make into Array and reference
-                break;
-            case 2:
-                System.out.println("Your accommodations will be GUESTHOUSES");
-                break;
-            default:
-                System.out.println("Your accommodations will be MID-RANGE HOTELS");
-        }
+        System.out.println("Based on your budget, the best transportation method for you is... " + getTransport(budget));
+        System.out.println("Your accommodation will be..." + getAccommodation(budget));
         System.out.println("-----------------------------");
         Client client = new Client(name, email, budget, choices);
         System.out.println("Your profile has been created with the following information.....");
         System.out.println("Name: " + name);
         System.out.println("Email: " + email);
         System.out.println("Activities: " + Arrays.toString(choices));
-        System.out.println("Budget: " + budgetDesc);
+        System.out.println("Budget: " + getBudget(budget));
         System.out.println("_______________________________");
         System.out.println("Your adventure will begin with a flight in to....");
 
@@ -185,7 +182,7 @@ public class TwoWeeksInThailand {
         }
 
         System.out.println("*************");
-        System.out.println("After that, you will take a " + transport + " to....");
+        System.out.println("After that, you will take a " + getTransport(budget) + " to....");
 
         for (Destination d : destinations) {
             if (d.getActivities().contains(choices[1])) {
@@ -194,7 +191,7 @@ public class TwoWeeksInThailand {
         }
 
         System.out.println("***************");
-        System.out.println("You will then whisk away on a " + transport + " to....");
+        System.out.println("You will then whisk away on a " + getTransport(budget) + " to....");
 
         for (Destination d : destinations) {
             if (d.getActivities().contains(choices[2])) {
