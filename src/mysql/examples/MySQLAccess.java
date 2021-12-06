@@ -31,15 +31,15 @@ public class MySQLAccess {
             // This will load the MySQL driver, each DB has its own driver
             Class.forName("com.mysql.jdbc.Driver");
             // Setup the connection with the DB
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/University?" +
-                    "user=root&password=&useSSL=false");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/university?" +
+                    "user=root&Travel4ever!=&useSSL=false");
 
 
             // Statements allow to issue SQL queries to the database
             statement = connection.createStatement();
 
             // Result set get the result of the SQL query
-            resultSet = statement.executeQuery("select * from University.courses;");
+            resultSet = statement.executeQuery("select * from university.courses;");
 
             //writeResultSet(resultSet);
             ArrayList<Course> course = mapResultSetToObjects(resultSet);

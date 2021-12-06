@@ -18,8 +18,8 @@ public class JDBC_Example_1 {
             // This will load the MySQL driver, each DB has its own driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            String connectionString = "jdbc:mysql://localhost/college?"
-                    + "user=<YOUR_MYSQL_USERNAME>&password=<YOUR_MYSQL_PASSWORD>"
+            String connectionString = "jdbc:mysql://localhost/university?"
+                    + "user=root&password=Travel4ever!"
                     + "&useSSL=false&allowPublicKeyRetrieval=true";
 
             // Setup the connection with the DB
@@ -30,7 +30,7 @@ public class JDBC_Example_1 {
             statement = connection.createStatement();
             // Result set get the result of the SQL query
             resultSet = statement
-                    .executeQuery("select * from college.courses");
+                    .executeQuery("select * from university.courses");
 
             // loop through the result set while there are more records
             while (resultSet.next()) {
@@ -48,7 +48,7 @@ public class JDBC_Example_1 {
             System.out.println("Exception occurred");
             exc.printStackTrace();
         } catch (ClassNotFoundException e) {
-            System.out.println("Exception occured - driver not found on classpath");
+            System.out.println("Exception occurred - driver not found on classpath");
             e.printStackTrace();
         } finally {
             try {

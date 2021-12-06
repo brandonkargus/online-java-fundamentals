@@ -1,7 +1,6 @@
 /**
  *
- * MySQL Exercise 1:
- *
+ * MySQL Exercise 1: *
  *      Using MySQLWorkbench,
  *
  *      1.) If you haven't already, create the college database as instructed here:
@@ -29,8 +28,13 @@
  *
  *      7.) Write queries (and paste them below) for each of the following tasks:
  *          a. select all students
+            SELECT * FROM college.students;
+
  *          b. select all teacher who teach "Math" (choose a subject you included)
+            SELECT * FROM college.teachers WHERE teachers.subject = "Math" ;
+
  *          c. use a join query to select all students with a certain teacher
+
  *          d. use a join query to select all students with taking a certain subject
  *          e. update a record in the student table
  *          f. add a record to the teacher table
